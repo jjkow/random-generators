@@ -1,0 +1,6 @@
+[submodule "u-boot-digilent"]
+	path = u-boot-digilent
+	url = https://github.com/jjkow/u-boot-digilent.git
+[submodule "linux-xlnx"]
+	path = linux-xlnx
+	url = https://github.com/jjkow/linux-xlnx.git
