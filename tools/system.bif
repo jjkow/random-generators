@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/jkow/Projects/zynq-random-generators/tools/FSBL.elf
+	/home/jkow/Projects/zynq-random-generators/tools/project_1/project_1.runs/impl_1/design_1_wrapper.bit
+	/home/jkow/Projects/zynq-random-generators/backup/u-boot.elf
+}
