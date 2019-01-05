@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER inverter_puf
+	OPTION supported_peripherals = (inverter_puf);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = inverter_puf;
+END DRIVER
