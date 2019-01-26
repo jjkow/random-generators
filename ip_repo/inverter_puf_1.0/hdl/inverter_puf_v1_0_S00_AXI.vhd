@@ -128,8 +128,7 @@ architecture arch_imp of inverter_puf_v1_0_S00_AXI is
     
     signal ring_osc1, ring_osc2, ring_osc3, ring_osc4 : std_logic_vector(INVERTER_NUMBER - 1 downto 0);
     signal dout1, dout2 : std_logic := '0';
-    signal uint8_reg : std_logic_vector(31 downto 0);
-    signal uint8_word : std_logic_vector(7 downto 0);
+    signal uint32_reg : std_logic_vector(31 downto 0);
     
     attribute DONT_TOUCH: string;
     attribute DONT_TOUCH of ring_osc1, ring_osc2, ring_osc3, ring_osc4: signal is "TRUE";
@@ -371,7 +370,7 @@ begin
 	    loc_addr := axi_araddr(ADDR_LSB + OPT_MEM_ADDR_BITS downto ADDR_LSB);
 	    case loc_addr is
 	      when b"00" =>
-	        reg_data_out <= uint8_reg; -- THIS REGISTER SHOULD CONTAIN uint8 RANDOM VALUE
+	        reg_data_out <= uint32_reg; -- THIS REGISTER SHOULD CONTAIN uint32 RANDOM VALUE
 	      when b"01" =>
 	        reg_data_out <= slv_reg1;
 	      when b"10" =>
@@ -450,13 +449,12 @@ begin
     begin
         if(rising_edge(S_AXI_ACLK)) then
             if( S_AXI_ARESETN = '1' ) then --if not in reset state
-                uint8_reg(0) <= dout1 xor dout2;
+                uint32_reg(0) <= dout1 xor dout2;
                 for i in 1 to 31 loop
-                    uint8_reg(i) <= uint8_reg(i - 1);
+                    uint32_reg(i) <= uint32_reg(i - 1);
                 end loop;
             else
-                uint8_word <= (others => '0');
-                uint8_reg <= (others => '0');
+                uint32_reg <= (others => '0');
             end if;
         end if;
     end process;
