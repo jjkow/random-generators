@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [[ $VIVADO_PATH == "" ]]; then
-    echo "Please set VIVADO_PATH to the directory with settings64.sh."
+if [[ $VIVADO_SETTINGS_PATH == "" ]]; then
+    echo "Please set VIVADO_SETTINGS_PATH to the settings64.sh."
     exit
 fi
 
-source $VIVADO_PATH/settings64.sh
+source $VIVADO_SETTINGS_PATH
 
 # Build BOOT.bin
 

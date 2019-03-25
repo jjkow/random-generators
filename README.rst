@@ -1,9 +1,5 @@
-Zynq Random Generators
-----------------------
-
-Includes:
-   * inverter chain PUF
-
+Random Generators
+-----------------
 #. **Run build.sh in tools directory to get BOOT.bin.**
 #. **Build kernel uImage and dtb.**
 

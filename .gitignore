@@ -1,0 +1,10 @@
+tools/vivado*
+tools/SDK
+tools/drivers
+tools/ps7*
+*.bin
+tools/*.elf
+*.bit
+tools/project*
+tools/hardware*
+tools/hsi*

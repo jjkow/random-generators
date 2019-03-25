@@ -814,7 +814,7 @@
       <xilinx:coreRevision>9</xilinx:coreRevision>
       <xilinx:coreCreationDateTime>2019-01-26T13:44:58Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="user.org:user:inverter_puf:1.0_ARCHIVE_LOCATION">/home/jkow/Projects/zynq-random-generators/ip_repo/inverter_puf_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="user.org:user:inverter_puf:1.0_ARCHIVE_LOCATION">../inverter_puf_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
